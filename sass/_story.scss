@@ -1,8 +1,27 @@
 .story{
 
     &__picture{
-        background-color: $color-primary-dark;
+        // background-color: $color-primary-dark;
         grid-column: full-start / col-end 4;
+        background-image: linear-gradient(rgba($color-primary, .5), rgba($color-primary, .5)), url(../img/back.jpg);
+        background-size: cover;
+
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    &__img--1{
+        width: 100%;
+        grid-row: 2 / 6;
+        grid-column: 2 / 6;
+    }
+
+    &__img--2{
+        width: 115%;
+        grid-row: 4 / 6;
+        grid-column: 4 / 7;
+        z-index: 10;
     }
 
     &__content{
